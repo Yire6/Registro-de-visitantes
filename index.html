@@ -12,58 +12,115 @@
   <header>
     <div class="logo">CorpSolutions S.A.</div>
     <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Sobre Nosotros</a>
-      <a href="#">Contacto</a>
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Sobre Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#registro">Registro</a>
+      <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
-  <div class="hero">
-    <h1>Bienvenido al Sistema de Registro de Visitantes</h1>
-    <p>
-      Mejore la seguridad y organización del ingreso de visitantes con nuestra solución digital rápida y confiable.
-    </p>
-    <button onclick="mostrarFormulario()">Ir al Registro</button>
-  </div>
-
-  <section id="sobre">
-    <h2>Sobre Nosotros</h2>
-    <p>
-      En CorpSolutions S.A. nos especializamos en soluciones tecnológicas para empresas modernas.
-      Nuestro objetivo es facilitar los procesos administrativos y de seguridad con herramientas digitales eficientes.
-    </p>
-  </section>
-
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>
-      📧 contacto@corpsolutions.com <br/>
-      ☎️ +505 1234 5678
-    </p>
-  </section>
-
-  <section id="formulario-section">
-    <h2>Registro de Visitantes</h2>
-
-    <form id="registroForm">
-      <div>
-        <label for="cedula">Número de cédula:</label>
-        <input type="text" id="cedula" required placeholder="999-999999-9999X">
-        <small class="error" id="error-cedula"></small>
+  <section id="inicio" class="inicio">
+    <div class="carousel">
+      <div class="carousel-slide active">
+        <img src="Src/empresa1.jpg" alt="Imagen 1">
       </div>
+      <div class="carousel-slide">
+        <img src="Src/empresa2.jpg" alt="Imagen 2">
+      </div>
+      <div class="carousel-slide">
+        <img src="Src/empresa3.png" alt="Imagen 3">
+      </div>
+    
+   
+      <h1>CorpSolutions S.A.</h1>
+      <p>
+        Somos líderes en soluciones digitales empresariales. Impulsamos la eficiencia y seguridad corporativa con herramientas tecnológicas modernas.
+      </p>
+    </div>
+  </section>
+  
 
+  <section id="nosotros" class="nosotros">
+    <div class="nosotros-contenido">
+      <h2>Sobre Nosotros</h2>
+      <p>
+        En CorpSolutions S.A., somos una empresa líder en soluciones tecnológicas diseñadas para transformar y optimizar los procesos empresariales. Con más de 25 años de experiencia, hemos trabajado junto a empresas de diferentes sectores, ayudándolas a alcanzar sus objetivos mediante la implementación de herramientas innovadoras y estrategias personalizadas.
+      </p>
+      <ul class="valores">
+        <li>✔ Innovación</li>
+        <li>✔ Compromiso</li>
+        <li>✔ Excelencia</li>
+      </ul>
+    </div>
+    <div class="nosotros-imagen">
+    <img src="Src/empresa2.jpg" alt="Equipo de trabajo" />
+    </div>
+    <div class="estadisticas">
+      <div class="estadistica">
+        <h3>80<span>+</span></h3>
+        <p>Certificaciones</p>
+      </div>
+      <div class="estadistica">
+        <h3>25<span>+</span></h3>
+        <p>Años de Experiencia</p>
+      </div>
+      <div class="estadistica">
+        <h3>30<span>+</span></h3>
+        <p>Tecnologías</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="servicios" class="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Consultoría</h3>
+        <p>Ofrecemos asesoramiento experto para optimizar tus procesos empresariales.</p>
+      </div>
+      <div class="card">
+        <h3>Desarrollo Web</h3>
+        <p>Diseñamos y desarrollamos sitios web modernos y funcionales.</p>
+      </div>
+      <div class="card">
+        <h3>Seguridad Informática</h3>
+        <p>Protegemos tus datos y sistemas con soluciones avanzadas de seguridad.</p>
+      </div>
+      <div class="card">
+        <h3>Soporte Técnico</h3>
+        <p>Brindamos soporte técnico especializado para resolver tus problemas tecnológicos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="registro" class="registro">
+    <h2>Registro de Visitantes</h2>
+    <p>Regístrate para obtener los siguientes beneficios:</p>
+    <ul class="beneficios">
+      <li>✔ Acceso a nuestras instalaciones.</li>
+      <li>✔ Atención personalizada por nuestro equipo.</li>
+      <li>✔ Participación en eventos exclusivos.</li>
+    </ul>
+    <button id="mostrarFormulario" class="btn-registrar">Registrarse</button>
+  
+    <form id="registroForm" class="formulario-oculto">
       <div>
         <label for="nombres">Nombres:</label>
         <input type="text" id="nombres" required>
         <small class="error" id="error-nombres"></small>
       </div>
-
       <div>
         <label for="apellidos">Apellidos:</label>
         <input type="text" id="apellidos" required>
         <small class="error" id="error-apellidos"></small>
       </div>
-
+      <div>
+        <label for="cedula">Número de cédula:</label>
+        <input type="text" id="cedula" required placeholder="999-999999-9999X">
+        <small class="error" id="error-cedula"></small>
+      </div>
       <div>
         <label for="departamento">Departamento que visita:</label>
         <select id="departamento" required>
@@ -74,36 +131,82 @@
         </select>
         <small class="error" id="error-departamento"></small>
       </div>
-
       <div>
         <label for="motivo">Motivo de la visita:</label>
         <input type="text" id="motivo" required>
         <small class="error" id="error-motivo"></small>
       </div>
-
-      <button type="submit">Registrar</button>
+      <button type="submit" class="btn-enviar">Registrar</button>
     </form>
 
-    <hr style="margin: 2rem 0;" />
-
-    <table id="tablaRegistros">
-      <thead>
-        <tr>
-          <th>Cédula</th>
-          <th>Nombres</th>
-          <th>Apellidos</th>
-          <th>Departamento</th>
-          <th>Motivo</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
+ <div id="tabla-registro" class="tabla-registro">
+  <h3>Visitantes Registrados</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Cédula</th>
+        <th>Departamento</th>
+        <th>Motivo</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    </tbody>
+  </table>
+</div>
   </section>
 
-  <footer>
-    © 2025 CorpSolutions S.A. | Todos los derechos reservados
+  <section id="contacto" class="contacto">
+    <h2>Contáctanos</h2>
+    <p>Estamos aquí para ayudarte. Puedes comunicarte con nosotros a través de los siguientes medios:</p>
+    <div class="contacto-info">
+      <div class="info-item">
+        <h3>📧 Correo Electrónico</h3>
+        <p>contacto@corpsolutions.com</p>
+      </div>
+      <div class="info-item">
+        <h3>☎️ Teléfono</h3>
+        <p>+505 1234 5678</p>
+      </div>
+      <div class="info-item">
+        <h3>📍 Dirección</h3>
+        <p>Av. Principal, Edificio CorpSolutions, Managua, Nicaragua</p>
+      </div>
+    </div>
+    <form id="contactoForm">
+      <h3>Envíanos un mensaje</h3>
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+      </div>
+      <div>
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" required>
+      </div>
+      <div>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn-enviar">Enviar</button>
+    </form>
+    
+</section>
+
+  <footer class="footer">
+    <div class="footer-contenido">
+      <div class="footer-logo">
+        <h3>CorpSolutions S.A.</h3>
+        <p>Impulsando la innovación empresarial con soluciones tecnológicas.</p>
+      </div>
+
+    <div class="footer-copy">
+      <p>&copy; 2025 CorpSolutions S.A. Todos los derechos reservados.</p>
+    </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js.js"></script>
+
 </body>
 </html>
