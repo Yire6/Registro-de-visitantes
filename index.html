@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CorpSolutions S.A. - Registro de Visitantes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">CorpSolutions S.A.</div>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Sobre Nosotros</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Bienvenido al Sistema de Registro de Visitantes</h1>
+    <p>
+      Mejore la seguridad y organización del ingreso de visitantes con nuestra solución digital rápida y confiable.
+    </p>
+    <button onclick="mostrarFormulario()">Ir al Registro</button>
+  </div>
+
+  <section id="sobre">
+    <h2>Sobre Nosotros</h2>
+    <p>
+      En CorpSolutions S.A. nos especializamos en soluciones tecnológicas para empresas modernas.
+      Nuestro objetivo es facilitar los procesos administrativos y de seguridad con herramientas digitales eficientes.
+    </p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>
+      📧 contacto@corpsolutions.com <br/>
+      ☎️ +505 1234 5678
+    </p>
+  </section>
+
+  <section id="formulario-section">
+    <h2>Registro de Visitantes</h2>
+
+    <form id="registroForm">
+      <div>
+        <label for="cedula">Número de cédula:</label>
+        <input type="text" id="cedula" required placeholder="999-999999-9999X">
+        <small class="error" id="error-cedula"></small>
+      </div>
+
+      <div>
+        <label for="nombres">Nombres:</label>
+        <input type="text" id="nombres" required>
+        <small class="error" id="error-nombres"></small>
+      </div>
+
+      <div>
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" required>
+        <small class="error" id="error-apellidos"></small>
+      </div>
+
+      <div>
+        <label for="departamento">Departamento que visita:</label>
+        <select id="departamento" required>
+          <option value="">Seleccione</option>
+          <option value="Ventas">Ventas</option>
+          <option value="Crédito">Crédito</option>
+          <option value="Recursos Humanos">Recursos Humanos</option>
+        </select>
+        <small class="error" id="error-departamento"></small>
+      </div>
+
+      <div>
+        <label for="motivo">Motivo de la visita:</label>
+        <input type="text" id="motivo" required>
+        <small class="error" id="error-motivo"></small>
+      </div>
+
+      <button type="submit">Registrar</button>
+    </form>
+
+    <hr style="margin: 2rem 0;" />
+
+    <table id="tablaRegistros">
+      <thead>
+        <tr>
+          <th>Cédula</th>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Departamento</th>
+          <th>Motivo</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <footer>
+    © 2025 CorpSolutions S.A. | Todos los derechos reservados
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
