@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CorpSolutions S.A. - Registro de Visitantes</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- FontAwesome para iconos sociales -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -31,8 +36,6 @@
       <div class="carousel-slide">
         <img src="Src/empresa3.png" alt="Imagen 3">
       </div>
-    
-   
       <h1>CorpSolutions S.A.</h1>
       <p>
         Somos líderes en soluciones digitales empresariales. Impulsamos la eficiencia y seguridad corporativa con herramientas tecnológicas modernas.
@@ -40,7 +43,6 @@
     </div>
   </section>
   
-
   <section id="nosotros" class="nosotros">
     <div class="nosotros-contenido">
       <h2>Sobre Nosotros</h2>
@@ -54,7 +56,7 @@
       </ul>
     </div>
     <div class="nosotros-imagen">
-    <img src="Src/empresa2.jpg" alt="Equipo de trabajo" />
+      <img src="Src/empresa2.jpg" alt="Equipo de trabajo" />
     </div>
     <div class="estadisticas">
       <div class="estadistica">
@@ -70,7 +72,6 @@
         <p>Tecnologías</p>
       </div>
     </div>
-
   </section>
 
   <section id="servicios" class="servicios">
@@ -139,23 +140,22 @@
       <button type="submit" class="btn-enviar">Registrar</button>
     </form>
 
- <div id="tabla-registro" class="tabla-registro">
-  <h3>Visitantes Registrados</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Nombres</th>
-        <th>Apellidos</th>
-        <th>Cédula</th>
-        <th>Departamento</th>
-        <th>Motivo</th>
-      </tr>
-    </thead>
-    <tbody>
-    
-    </tbody>
-  </table>
-</div>
+    <div id="tabla-registro" class="tabla-registro">
+      <h3>Visitantes Registrados</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Cédula</th>
+            <th>Departamento</th>
+            <th>Motivo</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <section id="contacto" class="contacto">
@@ -172,7 +172,7 @@
       </div>
       <div class="info-item">
         <h3>📍 Dirección</h3>
-        <p>Av. Principal, Edificio CorpSolutions, Managua, Nicaragua</p>
+        <p>Av. Principal, Edif. CorpSolutions, Managua, Nicaragua</p>
       </div>
     </div>
     <form id="contactoForm">
@@ -191,22 +191,50 @@
       </div>
       <button type="submit" class="btn-enviar">Enviar</button>
     </form>
-    
-</section>
+  </section>
 
+  <!-- Nuevo footer mejorado -->
   <footer class="footer">
-    <div class="footer-contenido">
-      <div class="footer-logo">
-        <h3>CorpSolutions S.A.</h3>
-        <p>Impulsando la innovación empresarial con soluciones tecnológicas.</p>
+    <div class="footer__grid">
+      <!-- Sobre nosotros -->
+      <div class="footer__col">
+        <h4>Sobre Nosotros</h4>
+        <p>Impulsando la innovación empresarial con soluciones tecnológicas que optimizan tus procesos.</p>
       </div>
-
-    <div class="footer-copy">
-      <p>&copy; 2025 CorpSolutions S.A. Todos los derechos reservados.</p>
+      <!-- Enlaces rápidos -->
+      <nav class="footer__col" aria-label="Enlaces rápidos">
+        <h4>Enlaces Rápidos</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Sobre Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#registro">Registro</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <!-- Contacto -->
+      <div class="footer__col">
+        <h4>Contacto</h4>
+        <p><strong>Email:</strong> <a href="mailto:contacto@corpsolutions.com">contacto@corpsolutions.com</a></p>
+        <p><strong>Teléfono:</strong> <a href="tel:+50512345678">+505 1234 5678</a></p>
+        <p><strong>Dirección:</strong> Av. Principal, Edif. CorpSolutions, Managua</p>
+      </div>
+      <!-- Redes sociales -->
+      <div class="footer__col">
+        <h4>Síguenos</h4>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 CorpSolutions S.A. Todos los derechos reservados.</p>
+      <p>Desarrollado por <a href="https://github.com/kisnner23" target="_blank">Anthony Maltez y Josue Alonzo Ramos</a></p>
     </div>
   </footer>
 
   <script src="js.js"></script>
-
 </body>
 </html>

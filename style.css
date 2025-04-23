@@ -1,3 +1,4 @@
+/* ========== Reset y Tipografía ========== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,6 +6,7 @@
   font-family: 'Inter', sans-serif;
 }
 
+/* ========== Header ========== */
 header {
   position: fixed;
   top: 0;
@@ -37,7 +39,6 @@ nav a {
   font-weight: 500;
   position: relative;
 }
-
 nav a::after {
   content: '';
   position: absolute;
@@ -48,18 +49,16 @@ nav a::after {
   bottom: -2px;
   transition: width 0.3s ease-in-out;
 }
-
 nav a:hover::after {
   width: 100%;
 }
 
+/* ========== Sección Inicio ========== */
 .inicio {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,32 +67,23 @@ nav a:hover::after {
   background: linear-gradient(135deg, #003f5c, #0077b6);
   color: #ffffff;
 }
-
 .inicio h1 {
-  position: relative;
   z-index: 2;
   font-size: 3.5rem;
   font-weight: 700;
-  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1rem;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
-
-/*estilo para la seccion de inicio*/
 .inicio p {
-  position: relative;
   z-index: 2;
   font-size: 1.5rem;
   line-height: 1.8;
   max-width: 800px;
   margin: 0 auto;
-  color: #f0f0f0;
-  text-align: center;
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
 }
-
 .carousel {
   position: absolute;
   top: 0;
@@ -102,7 +92,6 @@ nav a:hover::after {
   height: 100%;
   z-index: 1;
 }
-
 .carousel-slide {
   position: absolute;
   width: 100%;
@@ -110,11 +99,9 @@ nav a:hover::after {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
-
 .carousel-slide.active {
   opacity: 1;
 }
-
 .carousel-slide img {
   width: 100%;
   height: 100%;
@@ -123,62 +110,47 @@ nav a:hover::after {
   max-height: 100vh;
 }
 
-/*Estilo para la seccion de sobre nostros*/
-
+/* ========== Sección Sobre Nosotros ========== */
 .nosotros {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  position: relative;
-  z-index: 1;
   background: linear-gradient(135deg, #003f5c, #005f8a);
   color: #ffffff;
 }
-
 .nosotros-imagen img {
   width: 100%;
-  height: auto;
   max-width: 600px;
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   margin: 0 auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .nosotros-imagen img:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
-
 .nosotros-contenido {
   flex: 1;
   max-width: 600px;
   padding: 1rem;
-  z-index: 2;
 }
-
 .nosotros-contenido h2 {
   font-size: 3rem;
-  color: #e0e0e0;
   margin-bottom: 1rem;
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
-
 .nosotros-contenido p {
   font-size: 1.3rem;
   line-height: 1.8;
-  color: #e0e0e0;
   margin-bottom: 1.5rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
-
 .nosotros-contenido .valores {
   list-style: none;
-  padding: 0;
 }
-
 .nosotros-contenido .valores li {
   font-size: 1.2rem;
   color: #00ffab;
@@ -186,18 +158,15 @@ nav a:hover::after {
   display: flex;
   align-items: center;
 }
-
 .nosotros-contenido .valores li::before {
   content: "✔";
-  color: #00ffab;
   margin-right: 0.5rem;
   font-size: 1.5rem;
+  color: #00ffab;
 }
-
 .estadisticas {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 2rem;
   margin-top: 2rem;
   padding: 1rem;
@@ -208,231 +177,181 @@ nav a:hover::after {
 }
 .estadistica {
   text-align: center;
-  color: white;
 }
-
 .estadistica h3 {
   font-size: 3rem;
   font-weight: 700;
   margin: 0;
-  color: #ffffff;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
-
 .estadistica h3 span {
   font-size: 1.5rem;
   color: #00ffab;
 }
-
 .estadistica p {
   font-size: 1.2rem;
-  margin: 0.5rem 0 0;
-  color: #e0e0e0;
+  margin-top: 0.5rem;
 }
 
-/*estilo para seccion servicios */
-
+/* ========== Sección Servicios ========== */
 .servicios {
   padding: 4rem 2rem;
   background: linear-gradient(135deg, #00b4d8, #0077b6);
   color: white;
   text-align: center;
 }
-
 .servicios h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  color: #ffffff;
 }
-
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
-
 .card {
   background: white;
   color: #003f5c;
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .card h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #0077b6;
 }
-
 .card p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #555;
 }
-
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/*Estilo para registro*/
-
+/* ========== Sección Registro ========== */
 .registro {
   padding: 3rem 2rem;
   background: linear-gradient(135deg, #00b4d8, #0077b6);
   color: white;
   text-align: center;
 }
-
 .registro h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
-
 .registro p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
-
 .beneficios {
   list-style: none;
-  padding: 0;
   margin-bottom: 2rem;
 }
-
 .beneficios li {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
-
 .btn-registrar {
   background: #00ffab;
   color: #003f5c;
   padding: 0.8rem 1.5rem;
-  font-size: 1.2rem;
   border: none;
   border-radius: 5px;
+  font-size: 1.2rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
-
 .btn-registrar:hover {
   background: #00d4a3;
 }
-
 .formulario-oculto {
   display: none;
   margin-top: 2rem;
   text-align: left;
 }
-
 #registroForm div {
   margin-bottom: 1rem;
 }
-
 #registroForm label {
   display: block;
-  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
-
 #registroForm input,
 #registroForm select {
   width: 100%;
   padding: 0.5rem;
-  font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  transition: border-color 0.3s ease;
+  font-size: 1rem;
+  transition: border-color 0.3s;
 }
-
 #registroForm input:focus,
 #registroForm select:focus {
   border-color: #14dd4d;
   outline: none;
 }
-
 .error {
   color: #ff4d4d;
   font-size: 1.2rem;
   font-weight: bold;
   display: none;
   margin-top: 0.5rem;
-  line-height: 1.5;
 }
-
 .btn-enviar {
   background: #0077b6;
   color: white;
   padding: 0.8rem 1.5rem;
-  font-size: 1rem;
   border: none;
   border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
-
 .btn-enviar:hover {
   background: #005f8a;
 }
-
 .tabla-registro {
   margin-top: 2rem;
   text-align: center;
 }
-
 .tabla-registro table {
   width: 100%;
   border-collapse: collapse;
-  margin: 0 auto;
 }
-
 .tabla-registro th,
 .tabla-registro td {
   border: 1px solid #ccc;
   padding: 0.8rem;
   text-align: center;
 }
-
 .tabla-registro th {
   background: #0077b6;
   color: white;
-  font-weight: bold;
 }
-
-.tabla-registro td {
-  background: #f9f9f9;
-  color: #333;
-}
-
 .tabla-registro tr:nth-child(even) td {
   background: #e0e0e0;
 }
 
-
-/*estilo para seccion contacto*/
-
+/* ========== Sección Contacto ========== */
 .contacto {
   padding: 4rem 2rem;
   background: linear-gradient(135deg, #0077b6, #00b4d8);
   color: white;
   text-align: center;
 }
-
 .contacto h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
-
 .contacto p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
-
 .contacto-info {
   display: flex;
   flex-wrap: wrap;
@@ -440,7 +359,6 @@ nav a:hover::after {
   gap: 2rem;
   margin-bottom: 2rem;
 }
-
 .info-item {
   background: white;
   color: #333;
@@ -450,18 +368,17 @@ nav a:hover::after {
   max-width: 300px;
   text-align: left;
 }
-
 .info-item h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: #0077b6;
 }
-
 .info-item p {
   font-size: 1rem;
   line-height: 1.6;
 }
 
+/* ========== Formulario de Contacto ========== */
 #contactoForm {
   background: white;
   color: #333;
@@ -472,86 +389,90 @@ nav a:hover::after {
   margin: 0 auto;
   text-align: left;
 }
-
 #contactoForm h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #0077b6;
 }
-
 #contactoForm div {
   margin-bottom: 1rem;
 }
-
 #contactoForm label {
   display: block;
-  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
-
 #contactoForm input,
 #contactoForm textarea {
   width: 100%;
   padding: 0.5rem;
-  font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  transition: border-color 0.3s ease;
+  font-size: 1rem;
+  transition: border-color 0.3s;
 }
-
 #contactoForm input:focus,
 #contactoForm textarea:focus {
   border-color: #14dd4d;
   outline: none;
 }
 
-.btn-enviar {
-  background: #0077b6;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.btn-enviar:hover {
-  background: #005f8a;
-}
-
+/* ========== Footer mejorado ========== */
 .footer {
   background: #003f5c;
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
+  color: #eee;
+  padding: 3rem 1rem 1rem;
+  font-size: 0.9rem;
 }
-
-.footer-contenido {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+.footer__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
-
-.footer-logo h3 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+.footer__col h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
   color: #00b4d8;
 }
-
-.footer-logo p {
-  font-size: 1rem;
+.footer__col p {
   line-height: 1.6;
 }
-
-.footer-copy {
-  margin-top: 1.5rem;
-  border-top: 1px solid #00b4d8;
-  padding-top: 1rem;
-  font-size: 0.9rem;
-  color: #e0e0e0;
+.footer__col ul {
+  list-style: none;
+  padding: 0;
+}
+.footer__col li + li {
+  margin-top: 0.5rem;
+}
+.footer__col a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer__col a:hover {
+  color: #fff;
+}
+.footer__social a {
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+  color: #ccc;
+  transition: color 0.3s;
+}
+.footer__social a:hover {
+  color: #fff;
+}
+.footer__bottom {
+  border-top: 1px solid #005f8a;
   text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+}
+.footer__bottom a {
+  color: #ccc;  
+  text-decoration: none;
+}
+.footer__bottom a:hover {
+  color: #fff;
 }
